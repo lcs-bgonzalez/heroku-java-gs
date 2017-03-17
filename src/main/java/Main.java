@@ -18,7 +18,9 @@ public class Main {
 
     port(Integer.valueOf(System.getenv("PORT")));
     staticFileLocation("/public");
-
+	
+	post("/hello-post", (req, res) -> "Hello Posted World");
+	
     get("/hello", (req, res) -> "Hello World");
 
     get("/", (request, response) -> {
